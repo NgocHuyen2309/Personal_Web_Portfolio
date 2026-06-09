@@ -1,4 +1,4 @@
-import { GraduationCap, Award, Code2, Wrench } from 'lucide-react';
+import { GraduationCap, Award, Code2 } from 'lucide-react';
 import { useInViewAnimation } from '../hooks/useInViewAnimation';
 
 export function ProfileSection() {

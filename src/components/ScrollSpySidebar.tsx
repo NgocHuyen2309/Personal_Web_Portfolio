@@ -1,5 +1,4 @@
 import { useState, useEffect } from 'react';
-import { motion } from 'framer-motion';
 
 export function ScrollSpySidebar() {
   const [activeSection, setActiveSection] = useState('welcome');

@@ -8,7 +8,7 @@
 
 A modern, highly interactive, and visually stunning personal portfolio designed to showcase my journey as a **Frontend Developer** and **Computer Science Student**. The UI/UX is built with a dreamy "Lilac & Plum" color palette, incorporating glassmorphism, fluid animations, and responsive layouts.
 
-🔗 **Live Demo:** [Available soon on Vercel] *(Link will be updated after deployment)*
+🔗 **Live Demo:** [https://personal-web-portfolio-one.vercel.app/](https://personal-web-portfolio-one.vercel.app/)
 
 ---
 

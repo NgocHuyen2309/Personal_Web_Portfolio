@@ -11,8 +11,8 @@ export function ProjectsSection() {
       title: "Personal Web Portfolio",
       tech: "ReactJS, Tailwind CSS, Vite",
       desc: "Designed and developed a modern, single-page portfolio application to showcase software engineering projects and technical capabilities.",
-      demo: "https://ngochuyen2309.github.io/portfolio/",
-      github: "https://github.com/NgocHuyen2309",
+      demo: "https://personal-web-portfolio-one.vercel.app/",
+      github: "https://github.com/NgocHuyen2309/Personal_Web_Portfolio",
       gradient: "from-purple-200 to-fuchsia-300",
       blob: "40% 60% 70% 30% / 40% 50% 60% 50%"
     },

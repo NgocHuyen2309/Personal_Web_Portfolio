@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 
 export function ScrollSpySidebar() {
   const [activeSection, setActiveSection] = useState('welcome');
-  const sections = ['welcome', 'profile', 'projects', 'contact'];
+  const sections = ['welcome', 'profile', 'story', 'projects', 'contact'];
 
   useEffect(() => {
     const handleScroll = () => {
@@ -45,7 +45,7 @@ export function ScrollSpySidebar() {
           
           {/* Tooltip */}
           <span className="absolute left-10 opacity-0 group-hover:opacity-100 transition-opacity text-xs font-medium text-purple-800 bg-white px-2 py-1 rounded shadow-sm whitespace-nowrap pointer-events-none">
-            {section.charAt(0).toUpperCase() + section.slice(1)}
+            {section === 'story' ? 'My Story' : section.charAt(0).toUpperCase() + section.slice(1)}
           </span>
         </a>
       ))}

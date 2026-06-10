@@ -32,9 +32,9 @@ export function HeroSection() {
             <h2 className="text-2xl md:text-3xl font-medium text-purple-800 mt-2">
               I'm Hua Thi Ngoc Huyen
             </h2>
-            <p className="text-lg text-purple-900/70 mt-6 max-w-md leading-relaxed">
-              Frontend Developer & Final-year Computer Science Student passionate about modern Web Development and crafting seamless user
-experience.
+            <p className="text-base md:text-lg text-purple-900/70 mt-6 max-w-lg leading-relaxed">
+              Frontend Developer &amp; Final-year Computer Science Student passionate about modern Web Development and crafting seamless user experiences.
+              Solid foundation in building interactive interfaces using <span className="text-purple-700 font-semibold">ReactJS</span>, <span className="text-purple-700 font-semibold">JavaScript</span>, and <span className="text-purple-700 font-semibold">HTML/CSS</span>. Highly motivated to transition academic knowledge into real-world software engineering practices. Eager to take ownership, learn continuously, and contribute to robust platforms.
             </p>
           </motion.div>
 

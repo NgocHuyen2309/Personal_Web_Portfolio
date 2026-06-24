@@ -33,7 +33,7 @@ export function HeroSection() {
               I'm Hua Thi Ngoc Huyen
             </h2>
             <p className="text-base md:text-lg text-purple-900/70 mt-6 max-w-lg leading-relaxed">
-              Frontend Developer &amp; Final-year Computer Science Student passionate about modern Web Development and crafting seamless user experiences.
+              FullStack Javascript Developer &amp; Final-year Computer Science Student passionate about modern Web Development and crafting seamless user experiences.
               Solid foundation in building interactive interfaces using <span className="text-purple-700 font-semibold">ReactJS</span>, <span className="text-purple-700 font-semibold">JavaScript</span>, and <span className="text-purple-700 font-semibold">HTML/CSS</span>. Highly motivated to transition academic knowledge into real-world software engineering practices. Eager to take ownership, learn continuously, and contribute to robust platforms.
             </p>
           </motion.div>

@@ -24,7 +24,7 @@ export function ScrollSpySidebar() {
   }, []);
 
   return (
-    <div className="fixed left-6 top-1/2 -translate-y-1/2 z-40 hidden lg:flex flex-col gap-6">
+    <div className="fixed left-6 top-1/2 -translate-y-1/2 z-40 hidden xl:flex flex-col gap-6">
       {sections.map((section) => (
         <a 
           key={section} 

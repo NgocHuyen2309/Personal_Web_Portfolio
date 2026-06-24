@@ -2,21 +2,33 @@ import { motion } from 'framer-motion';
 import { useInViewAnimation } from '../hooks/useInViewAnimation';
 import me3 from '../assets/me3.jpg';
 
+import { Zap, Palette, Flower2 } from 'lucide-react';
+
 const storyCards = [
   {
-    icon: '⚡',
+    icon: Zap,
+    iconColor: 'text-amber-500',
+    bgClass: 'bg-gradient-to-br from-amber-100 to-orange-100',
     title: 'Drawn to what moves forward',
     body: "Technology has always felt like the pulse of the future — fast-evolving, endlessly surprising. I'm the kind of person who reads a product changelog for fun. The excitement of seeing a new framework, a new interaction paradigm, or a cleverly solved UX problem? That's what gets me out of bed.",
   },
   {
-    icon: '🎨',
+    icon: Palette,
+    iconColor: 'text-fuchsia-500',
+    bgClass: 'bg-gradient-to-br from-fuchsia-100 to-purple-100',
     title: 'Where art meets engineering',
     body: "I grew up caring deeply about aesthetics — how things look, how they feel, how they invite you in. Frontend development became the natural intersection: a craft where logic and beauty are equally important. I don't just build interfaces; I compose experiences.",
   },
   {
-    icon: '🌸',
+    icon: Flower2,
+    iconColor: 'text-rose-500',
+    bgClass: 'bg-gradient-to-br from-rose-100 to-pink-100',
     title: 'A woman who codes — and that matters',
-    body: "Women bring a distinct lens to tech: we tend to design with empathy first, asking *who* will use this before *how* to build it. In a field that shapes billions of daily interactions, that perspective isn't a soft skill — it's a strategic advantage. I'm proud to be part of a generation redefining what a developer looks like.",
+    body: (
+      <>
+        Women bring a distinct lens to tech: we tend to design with empathy first, asking <span className="font-bold text-purple-900">who</span> will use this before <span className="font-bold text-purple-900">how</span> to build it. In a field that shapes billions of daily interactions, that perspective isn't a soft skill — it's a strategic advantage. I'm proud to be part of a generation redefining what a developer looks like.
+      </>
+    ),
   },
 ];
 
@@ -91,8 +103,8 @@ export function MyStorySection() {
                 whileHover={{ x: 6 }}
                 className="group flex gap-5 bg-white border border-purple-100 rounded-3xl p-6 shadow-sm hover:shadow-purple-200/60 hover:border-purple-200 transition-all duration-300 cursor-default"
               >
-                <div className="shrink-0 w-12 h-12 rounded-2xl bg-gradient-to-br from-purple-100 to-fuchsia-100 flex items-center justify-center text-2xl group-hover:scale-110 transition-transform duration-300">
-                  {card.icon}
+                <div className={`shrink-0 w-12 h-12 rounded-2xl ${card.bgClass} flex items-center justify-center group-hover:scale-110 transition-transform duration-300`}>
+                  <card.icon className={`w-6 h-6 ${card.iconColor}`} strokeWidth={2.5} />
                 </div>
                 <div>
                   <h3 className="font-semibold text-purple-950 text-base mb-2">{card.title}</h3>

@@ -59,7 +59,7 @@ export function ProfileSection() {
           className="absolute w-[320px] h-[320px] md:w-[520px] md:h-[520px] rounded-full z-10 flex items-center justify-center"
         >
           {/* Outer glowing gradient ring */}
-          <div className="absolute inset-0 rounded-full border-[3px] border-transparent shadow-[0_0_50px_rgba(217,70,239,0.3)]" style={{ background: 'linear-gradient(to right, #d946ef, #8b5cf6, #fbbf24) border-box', WebkitMask: 'linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0)', WebkitMaskComposite: 'xor', maskComposite: 'exclude' }} />
+          <div className="absolute inset-0 rounded-full border-[3px] border-purple-400 shadow-[0_0_30px_rgba(217,70,239,0.3)] md:border-fuchsia-400 md:shadow-[0_0_50px_rgba(217,70,239,0.4)]" />
           
           {/* Secondary rotating dashed ring */}
           <motion.div 
@@ -69,7 +69,7 @@ export function ProfileSection() {
           />
 
           {/* Intense vibrant center glow */}
-          <div className="absolute inset-16 bg-gradient-to-tr from-fuchsia-400/40 via-purple-500/30 to-amber-300/40 rounded-full blur-[60px]" />
+          <div className="absolute inset-16 bg-gradient-to-tr from-fuchsia-400/40 via-purple-500/30 to-amber-300/40 rounded-full blur-[30px] md:blur-[60px]" />
         </motion.div>
 
         {/* ─── Center: large sticker image, no frame ─── */}
@@ -81,7 +81,7 @@ export function ProfileSection() {
           <img
             src={stickerImg}
             alt="Hua Thi Ngoc Huyen"
-            className="w-auto h-[450px] md:h-[650px] object-contain select-none filter drop-shadow-[0_0_40px_rgba(217,70,239,0.5)] drop-shadow-[0_15px_20px_rgba(88,28,135,0.3)]"
+            className="w-auto h-[450px] md:h-[550px] lg:h-[650px] object-contain select-none filter drop-shadow-[0_0_40px_rgba(217,70,239,0.5)] drop-shadow-[0_15px_20px_rgba(88,28,135,0.3)]"
             draggable={false}
           />
         </motion.div>
@@ -93,10 +93,13 @@ export function ProfileSection() {
           
           const rxDesk = 440; 
           const ryDesk = 360;
-          const rxMob = 160;
-          const ryMob = 250;
+          const rxTab = 320;
+          const ryTab = 300;
+          const rxMob = 170;
+          const ryMob = 220;
           
           const posDesk = posFromAngle(angle, rxDesk, ryDesk);
+          const posTab = posFromAngle(angle, rxTab, ryTab);
           const posMob = posFromAngle(angle, rxMob, ryMob);
           
           return (
@@ -113,23 +116,29 @@ export function ProfileSection() {
                   rotate: { delay: i * 0.1, duration: 2.5 + (i % 2) * 0.5, repeat: Infinity, ease: 'easeInOut' },
                   y: { delay: i * 0.1, duration: 2.5 + (i % 2) * 0.5, repeat: Infinity, ease: 'easeInOut' },
                 }}
-                className="relative flex flex-col items-center gap-1.5 w-16 h-16 md:w-[86px] md:h-[86px] justify-center group hover:scale-110 transition-all duration-300 cursor-default"
+                className="relative flex flex-col items-center gap-1.5 w-12 h-12 md:w-[86px] md:h-[86px] justify-center group hover:scale-110 transition-all duration-300 cursor-default"
               >
                 {/* Gradient Border Background */}
-                <div className="absolute inset-0 bg-gradient-to-tr from-fuchsia-500 via-purple-400 to-amber-400 rounded-[18px] opacity-80 group-hover:opacity-100 group-hover:shadow-[0_0_20px_rgba(192,132,252,0.6)] transition-all duration-300" />
+                <div className="absolute inset-0 bg-gradient-to-tr from-fuchsia-500 via-purple-400 to-amber-400 rounded-xl md:rounded-[18px] opacity-80 group-hover:opacity-100 group-hover:shadow-[0_0_20px_rgba(192,132,252,0.6)] transition-all duration-300" />
                 {/* Inner glass card */}
-                <div className="absolute inset-[2px] bg-white/95 backdrop-blur-md rounded-[16px] flex flex-col items-center justify-center gap-1.5 z-10">
-                  <img src={item.icon} alt={item.name} className="w-7 h-7 md:w-10 md:h-10 object-contain drop-shadow-sm" />
-                  <span className="text-[8px] md:text-[10px] font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-purple-800 to-fuchsia-600 uppercase leading-none mt-0.5 tracking-wider">{item.name}</span>
+                <div className="absolute inset-[2px] bg-white/95 backdrop-blur-md rounded-[10px] md:rounded-[16px] flex flex-col items-center justify-center gap-1 z-10">
+                  <img src={item.icon} alt={item.name} className="w-5 h-5 md:w-10 md:h-10 object-contain drop-shadow-sm" />
+                  <span className="hidden md:block text-[10px] font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-purple-800 to-fuchsia-600 uppercase leading-none mt-0.5 tracking-wider">{item.name}</span>
                 </div>
               </motion.div>
               
               <style>{`
                 .orbit-pos-${i} {
-                  margin-left: calc(${posMob.x}px - 32px);
-                  margin-top: calc(${posMob.y}px - 32px);
+                  margin-left: calc(${posMob.x}px - 24px);
+                  margin-top: calc(${posMob.y}px - 24px);
                 }
                 @media (min-width: 768px) {
+                  .orbit-pos-${i} {
+                    margin-left: calc(${posTab.x}px - 43px);
+                    margin-top: calc(${posTab.y}px - 43px);
+                  }
+                }
+                @media (min-width: 1024px) {
                   .orbit-pos-${i} {
                     margin-left: calc(${posDesk.x}px - 43px);
                     margin-top: calc(${posDesk.y}px - 43px);

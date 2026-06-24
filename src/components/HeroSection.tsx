@@ -13,10 +13,10 @@ export function HeroSection() {
       <div className="absolute top-20 left-10 w-64 h-64 bg-purple-200/40 blur-3xl rounded-full mix-blend-multiply" />
       <div className="absolute bottom-20 right-10 w-80 h-80 bg-amber-200/30 blur-3xl rounded-full mix-blend-multiply" />
       
-      <div className="max-w-6xl w-full grid grid-cols-1 lg:grid-cols-2 gap-12 items-center z-10">
+      <div className="max-w-6xl w-full flex flex-col-reverse lg:grid lg:grid-cols-2 gap-8 lg:gap-12 items-center z-10 mt-10 lg:mt-0">
         
         {/* Left: Typography */}
-        <div className="flex flex-col gap-6">
+        <div className="flex flex-col gap-4 lg:gap-6 items-center text-center lg:items-start lg:text-left">
           <motion.div
             initial={{ opacity: 0, x: -30 }}
             animate={{ opacity: 1, x: 0 }}
@@ -64,7 +64,7 @@ export function HeroSection() {
           className="flex justify-center lg:justify-end"
         >
           <div 
-            className="relative w-[320px] h-[320px] md:w-[450px] md:h-[450px] bg-gradient-to-br from-purple-300 to-fuchsia-400 p-2 shadow-xl animate-float"
+            className="relative w-[280px] h-[280px] md:w-[450px] md:h-[450px] bg-gradient-to-br from-purple-300 to-fuchsia-400 p-2 shadow-xl animate-float"
             style={{ borderRadius: '40% 60% 70% 30% / 40% 50% 60% 50%' }}
           >
             <div 
